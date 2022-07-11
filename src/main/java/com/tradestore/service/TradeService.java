@@ -32,7 +32,7 @@ public class TradeService {
 	    }
 
 	    private boolean isVersionValid(Trade trade,Trade oldTrade) throws InvalidTradeException {
-	        if(trade.getVersion() == oldTrade.getVersion()){
+	        if(trade.getVersion() >= oldTrade.getVersion()){
 	            return true;
 	        }
 	        if(trade.getVersion() < oldTrade.getVersion()) {
